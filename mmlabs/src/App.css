@@ -1,0 +1,49 @@
+.app--container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register--titlepage {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: monospace;
+}
+
+.register--container {
+  padding: 10px 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.register--title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: monospace;
+
+}
+
+.register--inputLabel {
+  display: block;
+  padding: 10px auto;
+  margin-bottom: -10px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.register--input {
+  display: block;
+  padding: 10px auto;
+  margin: 10px 20px;
+}
+
+.register--button {
+  margin-left: 20px;
+  padding: 3px 9px;
+  background-color: bisque;
+
+  border: 0.1px solid black;
+}
