@@ -41,8 +41,6 @@ function App() {
   });
   }, []);
 
-//  const[values, SetValues] = useState({})
-
   return <div className="app--container">
     <header>
       <div>
@@ -58,10 +56,10 @@ function App() {
         <input type="text" name="nome" placeholder="Nome" className="register--input" onChange={handleChangeValues}/>
         <h3 className="register--inputLabel">E-mail*</h3>
         <input type="text" name="email" placeholder="E-mail" className="register--input"onChange={handleChangeValues}/>
-        <h3 className="register--inputLabel">Telefone*</h3>
-        <MaskedInput name="telefone" mask="(99) 99999-9999" value={values.telefone}  onChange={handleChange}/>
+        <h3 className="register--inputLabel">Telefone</h3>
+        <MaskedInput name="telefone"  mask="(99) 99999-9999" value={values.telefone}  onChange={handleChange}/>
 
-        <button className="register--button" onClick={() => handleClickButton()} >Enviar</button>
+        <button className="register--button" onClick={() => handleClickButton()} >Salvar</button>
      </div>
      {console.log(listCadastros)}
      {typeof listCadastros !== "undefined" && 

@@ -97,10 +97,12 @@ export default function FormDialog(props) {
             margin="dense"
             id="telefone"
             label="Telefone"
+            inputProps={{ maxLength: 11 }}
             defaultValue={props.telefone}
             type="text"
             onChange={handleChangeValues}
             fullWidth
+            
           />
         </DialogContent>
         <DialogActions>

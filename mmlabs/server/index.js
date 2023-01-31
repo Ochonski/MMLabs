@@ -18,7 +18,7 @@ app.post("/register", (req, res) => {
   const { email } = req.body;
   const { telefone } = req.body;
 
-  let SQL = "INSERT INTO pessoa (nome, email, telefone) values (?,?,?)";
+  let SQL = "INSERT INTO mmlabs.pessoa (nome, email, telefone) values (?,?,?)";
 
   db.query(SQL, [nome, email, telefone], (err, result) => {
    if(err) console.log(err)
@@ -27,7 +27,7 @@ app.post("/register", (req, res) => {
 });
 
 app.get("/getCards", (req, res) => {
-   let SQL = "SELECT * FROM pessoa p ORDER BY p.nome ASC";
+   let SQL = "SELECT * FROM mmlabs.pessoa p ORDER BY p.nome ASC";
    db.query(SQL, (err, result)=> {
       if(err) console.log(err)
       else res.send(result);
@@ -40,7 +40,7 @@ app.put("/edit", (req, res) => {
   const {email} = req.body;
   const {telefone} = req.body;
 
-  let SQL = "UPDATE pessoa SET nome = ?, email = ?, telefone = ? where pessoa_id = ?";
+  let SQL = "UPDATE mmlabs.pessoa SET nome = ?, email = ?, telefone = ? where pessoa_id = ?";
 
   db.query(SQL, [nome, email, telefone, id], (err, result) => {
    if(err) console.log(err)
@@ -50,7 +50,7 @@ app.put("/edit", (req, res) => {
 
 app.delete("/delete/:id", (req, res) => {
    const {id} = req.params;
-   let SQL = "DELETE FROM pessoa where pessoa_id = ?";
+   let SQL = "DELETE FROM mmlabs.pessoa where pessoa_id = ?";
 
    db.query(SQL, [id], (err, result) => {
       if(err) console.log(err);
